@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": "off",
+    "import/extensions": ["error", "always"],
+    "import/no-unresolved": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js"]
+      }
+    }
+  }
+}
