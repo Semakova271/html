@@ -10,31 +10,21 @@ class Game {
     this.initializeGame();
   }
 
-  initializeGame() {
-    this.createBoard();
-    this.createGoblin();
-    this.startGame();
-  }
-
   createBoard() {
     const gameBoard = document.getElementById('gameBoard');
-    
-    // Clear existing board
-    while (gameBoard.firstChild) {
-      gameBoard.firstChild.remove();
-    }
+    gameBoard.innerHTML = '';
 
-    for (let i = 0; i < this.boardSize; i++) {
+    for (let i = 0; i < this.boardSize; i += 1) {
       const row = document.createElement('div');
       row.className = 'row';
-      
-      for (let j = 0; j < this.boardSize; j++) {
+
+      for (let j = 0; j < this.boardSize; j += 1) {
         const cell = document.createElement('div');
         cell.className = 'cell';
         cell.dataset.position = `${i}-${j}`;
         row.append(cell);
       }
-      
+
       gameBoard.append(row);
     }
   }
@@ -76,5 +66,8 @@ class Game {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Game();
+  const game = new Game();
+  game.startGame();
 });
+
+export default Game;
