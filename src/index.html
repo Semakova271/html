@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goblin Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popover Widget</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="game-container">
-    <h1>Goblin Game</h1>
-    <div class="game-board" id="gameBoard"></div>
-  </div>
+    <div class="container">
+        <h1>Popover Widget</h1>
+        <p class="description">Реализация popover виджета на чистом JavaScript без jQuery</p>
+        
+        <div class="popover-demo">
+            <h2>Демонстрация работы</h2>
+            <div class="buttons-container">
+                <button class="btn" id="topBtn">Popover сверху</button>
+                <button class="btn" id="bottomBtn">Popover снизу</button>
+                <button class="btn" id="leftBtn">Popover слева</button>
+                <button class="btn" id="rightBtn">Popover справа</button>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>Чистый JS</h3>
+                <p>Без jQuery и сторонних библиотек</p>
+            </div>
+            <div class="feature-card">
+                <h3>Адаптивный</h3>
+                <p>Работает на всех устройствах</p>
+            </div>
+            <div class="feature-card">
+                <h3>Кастомизация</h3>
+                <p>Легко изменить стили</p>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>Инструкция по использованию</h2>
+            <ol>
+                <li>Создайте элемент-триггер</li>
+                <li>Инициализируйте: <code>new Popover(element, options)</code></li>
+                <li>Укажите title и content</li>
+                <li>Выберите положение: 'top', 'bottom', 'left', 'right'</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="js/popover.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

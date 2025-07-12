@@ -1,16 +1,9 @@
-# Игра "Поймай гоблина"
+# Popover Widget
 
-[![CI Status](https://github.com/<your-username>/<your-repo>/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/Semakova271/DOM/actions)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://Semakova271.github.io/DOM/)
+[![Build Status](https://github.com/Semakova271/html/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/Semakova271/html/actions)
 
-## Описание
-Игра, в которой гоблин появляется в случайных клетках игрового поля.
+Реализация popover виджета на чистом JavaScript без jQuery.
 
-## Демо
-Игра доступна по ссылке: [GitHub Pages](https://Semakova271.github.io/DOM/)
+[Посмотреть демо](https://Semakova271/.github.io/html/)
 
-## Особенности
-- Автоматический деплой через GitHub Actions
-- Сборка через Webpack
-- Проверка кода ESLint
-
+# html

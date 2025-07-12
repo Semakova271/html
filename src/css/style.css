@@ -1,38 +1,156 @@
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #333;
 }
 
-.game-container {
-  text-align: center;
+.container {
+    max-width: 800px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    margin: 20px;
+    text-align: center;
 }
 
-.game-board {
-  margin-top: 20px;
+h1 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 2.5rem;
 }
 
-.row {
-  display: flex;
+.description {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0 30px;
 }
 
-.cell {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  position: relative;
+.btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
 }
 
-.goblin {
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
+.btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #3498db;
+    margin-top: 0;
+}
+
+.popover-container {
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    width: 250px;
+    z-index: 1000;
+    display: none;
+}
+
+.popover-header {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    border-radius: 8px 8px 0 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.popover-body {
+    padding: 15px;
+    line-height: 1.5;
+    color: #34495e;
+}
+
+.popover-arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.instructions {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.instructions h2 {
+    color: #3498db;
+    margin-top: 0;
+}
+
+.instructions ol {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+.popover-demo {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.popover-demo h2 {
+    color: #3498db;
+    margin-top: 0;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }

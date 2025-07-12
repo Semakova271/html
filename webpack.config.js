@@ -1,13 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/js/index.js',
   output: {
-    filename: 'main.js',
+    filename: 'js/main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    assetModuleFilename: 'assets/[hash][ext][query]'
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -22,18 +22,23 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|gif)$/,
         type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]',
+        },
       },
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      filename: 'index.html',
     }),
   ],
   devServer: {
@@ -43,5 +48,6 @@ module.exports = {
     compress: true,
     port: 9000,
     open: true,
+    hot: true,
   },
 };
